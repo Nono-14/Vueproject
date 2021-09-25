@@ -1,0 +1,140 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 2.3fr 0.3fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: column dense;
+    grid-template-areas:
+      "nav"
+      "itemarea"
+      "fott";
+  }
+  
+  .nav {
+  
+    justify-self: center;
+    align-self: start;
+    grid-area: nav;
+  }
+  
+  .itemarea {
+  
+    justify-self: stretch;
+    align-self: center;
+    grid-area: itemarea;
+  }
+  
+
+  .fott {
+    
+    justify-self: stretch;
+    align-self: end;
+    grid-area: fott;
+    
+  }
+
+
+  
+
+body{
+    background-color: #002939;
+    font-family: 'Cormorant', serif;
+    color: #E4CFA9;
+}
+
+ul {
+    justify-self: center;
+    align-self: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: color #002939;
+    font-family: 'Cormorant', serif;
+    
+  }
+  li {
+    float: left;
+    display: grid;
+    cursor: pointer;
+
+  }
+  
+li a {
+    display:grid;
+    color: #E4CFA9;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    grid-area: nav;
+  }
+  
+li a:hover{
+    opacity: 0.3;
+  }
+
+.items {
+    float:inline-start;
+    border-radius: 20px;
+    border: 30px;
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.4);
+    max-width: 250px;
+    text-align: center;
+    margin: auto;
+    font-family: 'Cormorant',serif;
+    color: #E4CFA9;
+    grid-area: itemarea;
+    padding: 25px;
+    justify-content: space-evenly;
+}
+  
+  .price {
+    color: #E4CFA9;
+    font-size: 22px;
+  }
+  
+  .items button {
+    border: none;
+    padding: 15px;
+    color: #002939;
+    background-color: #E4CFA9;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Cormorant',serif;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 20px 20px 20px 20px;
+  }
+  
+  .items button:hover {
+    opacity: 0.7;
+  }
+  .checkoutbutton{
+    border: none;
+    padding: 10px;
+    color: #002939;
+    background-color: #E4CFA9;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Cormorant',serif;
+    width: 40%;
+    font-size: 15px;
+    border-radius: 20px 20px 20px 20px;
+
+  }
+  .img{
+    width: 75%;
+    height: 75%;
+  }
+  .cart {
+    float: right;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 250px;
+    
+}
+  

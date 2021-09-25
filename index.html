@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="design.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>SplitVision</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+          
+        <nav class="nav">
+          <ul>
+            <li @click="switchPage('start')">
+              <a>Home</a>
+            </li>
+            <li @click="switchPage('men')">
+              <a>Men</a>
+            </li>
+            <li @click="switchPage('women')">
+              <a>Women</a>
+            </li>
+            <li @click="switchPage('jewelery')">
+              <a>Jewelery</a>
+            </li>
+          </ul>
+        </nav>
+        <main v-if="!isLoaded">
+            <cart></cart>
+          <div v-if="currentPage === 'start' ">
+            <top-products></top-products>
+          </div>
+
+          <div v-if="currentPage === 'men' ">
+            <men-products></men-products>
+          </div>
+
+          <div v-if="currentPage === 'women' ">
+              <women-products></women-products>
+          </div>
+
+          <div v-if="currentPage === 'jewelery' ">
+              <jewelry></jewelry>
+          </div>
+
+          <div v-if="currentPage === 'admin' ">
+              <admin></admin>
+          </div>
+
+          <div v-if="currentPage === 'checkout' ">
+              <checkcart></checkcart>
+          </div>
+        </main>
+        <footer class="fott">
+            <li @click="switchPage('admin')">
+                <a>Admin</a>
+            </li>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="scripts/js.js"></script>
+</html>
