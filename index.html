@@ -28,11 +28,16 @@
             <li @click="switchPage('jewelery')">
               <a>Jewelery</a>
             </li>
+            <li @click="switchPage('checkout')">
+              <a>Cart</a>
+            </li>
           </ul>
         </nav>
         <main v-if="!isLoaded">
-            <cart></cart>
-          <div v-if="currentPage === 'start' ">
+          <div v-if="currentPage === 'checkout' ">
+             <checkcart></checkcart>
+          </div>
+         <div v-if="currentPage === 'start' ">
             <top-products></top-products>
           </div>
 
@@ -52,14 +57,12 @@
               <admin></admin>
           </div>
 
-          <div v-if="currentPage === 'checkout' ">
-              <checkcart></checkcart>
-          </div>
         </main>
         <footer class="fott">
             <li @click="switchPage('admin')">
                 <a>Admin</a>
             </li>
+          
         </footer>
       </div>
     </div>
