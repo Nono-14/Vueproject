@@ -1,4 +1,4 @@
-const url = "scripts/products.json";
+const url = "products.json";
 let cart = [];
 let fullQuantity = 0;
 let totalPrice = 0;
